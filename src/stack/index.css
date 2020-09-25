@@ -1,9 +1,3 @@
-@property --gap {
-	syntax: '<length>';
-	initial-value: 0;
-	inherits: false;
-}
-
 x-stack {
 	display: flex;
 	flex-direction: column;
