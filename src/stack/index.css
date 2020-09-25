@@ -1,0 +1,174 @@
+@property --gap {
+	syntax: '<length>';
+	initial-value: 0;
+	inherits: false;
+}
+
+x-stack {
+	display: flex;
+	flex-direction: column;
+}
+
+x-stack > x-stack {
+	outline-color: red;
+	outline-style: solid;
+	outline-width: 4px;
+}
+
+x-stack[axis~="x"] {
+	flex-direction: row;
+}
+x-stack[axis~="-x"] {
+	flex-direction: row-reverse;
+}
+x-stack[axis~="y"] {
+	flex-direction: column;
+}
+x-stack[axis~="-y"] {
+	flex-direction: column-reverse;
+}
+x-stack > * {
+	margin: 0;
+	--gap: inherit;
+}
+x-stack[axis~="x"] > * + * {
+	margin-left: var(--gap, 0);
+}
+x-stack[axis~="-x"] > * + * {
+	margin-right: var(--gap, 0);
+}
+x-stack[axis~="y"] > * + * {
+	margin-top: var(--gap, 0);
+}
+x-stack[axis~="-y"] > * + * {
+	margin-bottom: var(--gap, 0);
+}
+
+
+/* sm */
+@media (min-width: 640px) {
+	x-stack[axis~="sm\:x"] {
+		flex-direction: row;
+	}
+	x-stack[axis~="sm\:-x"] {
+		flex-direction: row-reverse;
+	}
+	x-stack[axis~="sm\:y"] {
+		flex-direction: column;
+	}
+	x-stack[axis~="sm\:-y"] {
+		flex-direction: column-reverse;
+	}
+	x-stack[axis~="sm\:x"] > * + * {
+		margin: 0;
+		margin-left: var(--gap, 0);
+	}
+	x-stack[axis~="sm\:-x"] > * + * {
+		margin: 0;
+		margin-right: var(--gap, 0);
+	}
+	x-stack[axis~="sm\:y"] > * + * {
+		margin: 0;
+		margin-top: var(--gap, 0);
+	}
+	x-stack[axis~="sm\:-y"] > * + * {
+		margin: 0;
+		margin-bottom: var(--gap, 0);
+	}
+}
+
+/* md */
+@media (min-width: 768px) {
+	x-stack[axis~="md\:x"] {
+		flex-direction: row;
+	}
+	x-stack[axis~="md\:-x"] {
+		flex-direction: row-reverse;
+	}
+	x-stack[axis~="md\:y"] {
+		flex-direction: column;
+	}
+	x-stack[axis~="md\:-y"] {
+		flex-direction: column-reverse;
+	}
+	x-stack[axis~="md\:x"] > * + * {
+		margin: 0;
+		margin-left: var(--gap, 0);
+	}
+	x-stack[axis~="md\:-x"] > * + * {
+		margin: 0;
+		margin-right: var(--gap, 0);
+	}
+	x-stack[axis~="md\:y"] > * + * {
+		margin: 0;
+		margin-top: var(--gap, 0);
+	}
+	x-stack[axis~="md\:-y"] > * + * {
+		margin: 0;
+		margin-bottom: var(--gap, 0);
+	}
+}
+
+/* lg */
+@media (min-width: 1024px) {
+	x-stack[axis~="lg\:x"] {
+		flex-direction: row;
+	}
+	x-stack[axis~="lg\:-x"] {
+		flex-direction: row-reverse;
+	}
+	x-stack[axis~="lg\:y"] {
+		flex-direction: column;
+	}
+	x-stack[axis~="lg\:-y"] {
+		flex-direction: column-reverse;
+	}
+	x-stack[axis~="lg\:x"] > * + * {
+		margin: 0;
+		margin-left: var(--gap, 0);
+	}
+	x-stack[axis~="lg\:-x"] > * + * {
+		margin: 0;
+		margin-right: var(--gap, 0);
+	}
+	x-stack[axis~="lg\:y"] > * + * {
+		margin: 0;
+		margin-top: var(--gap, 0);
+	}
+	x-stack[axis~="lg\:-y"] > * + * {
+		margin: 0;
+		margin-bottom: var(--gap, 0);
+	}
+}
+
+/* xl */
+@media (min-width: 1280px) {
+	x-stack[axis~="xl\:x"] {
+		flex-direction: row;
+	}
+	x-stack[axis~="xl\:-x"] {
+		flex-direction: row-reverse;
+	}
+	x-stack[axis~="xl\:y"] {
+		flex-direction: column;
+	}
+	x-stack[axis~="xl\:-y"] {
+		flex-direction: column-reverse;
+	}
+	x-stack[axis~="lg\:x"] > * + * {
+		margin: 0;
+		margin-left: var(--gap, 0);
+	}
+	x-stack[axis~="lg\:-x"] > * + * {
+		margin: 0;
+		margin-right: var(--gap, 0);
+	}
+	x-stack[axis~="lg\:y"] > * + * {
+		margin: 0;
+		margin-top: var(--gap, 0);
+	}
+	x-stack[axis~="lg\:-y"] > * + * {
+		margin: 0;
+		margin-bottom: var(--gap, 0);
+	}
+}
