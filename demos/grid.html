@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Grid</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="../src/grid.css" />
+
+		<style>
+			x-col {
+				background: red;
+				min-height: 128px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<x-grid cols="1 sm:2 md:3 lg:4">
+			<x-col span="sm:row md:2 lg:1"></x-col>
+			<x-col></x-col>
+			<x-col></x-col>
+			<x-col></x-col>
+		</x-grid>
+	</body>
+</html>
