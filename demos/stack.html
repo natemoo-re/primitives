@@ -1,29 +1,33 @@
 <html>
-	<head>
-		<title>Stack</title>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="../src/stack/index.css" />
+  <head>
+    <title>Stack</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../src/base.css" />
+    <link rel="stylesheet" href="../src/stack/index.css" />
 
-		<style>
-			div {
-				width: 64px;
-				height: 64px;
-				background: black;
-			}
-		</style>
-	</head>
+    <style>
+      div:empty {
+        width: 64px;
+        height: 64px;
+        background: black;
+      }
+    </style>
+  </head>
 
-	<body>
-		<x-stack axis="x md:y" style="--gap: 1rem;">
-			<div></div>
-			<div></div>
-			<div></div>
-			<x-stack axis="y md:x" style="--gap: 4rem;">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</x-stack>
-		</x-stack>
-	</body>
+  <body>
+    <x-stack axis="x md:y" gap="4">
+      <div></div>
+      <div></div>
+      <div>
+        <x-stack axis="y md:x" gap="2">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </x-stack>
+      </div>
+      <div></div>
+      <div></div>
+    </x-stack>
+  </body>
 </html>

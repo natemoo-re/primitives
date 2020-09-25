@@ -2,22 +2,96 @@
 	<head>
 		<title>Grid</title>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="../src/grid.css" />
+		<link rel="stylesheet" href="../src/base.css" />
+		<link rel="stylesheet" href="../src/grid/index.css" />
 
 		<style>
+			html, body {
+				margin: 0;
+				padding: 0;
+				min-height: 100vh;
+			}
+
+			x-grid {
+				padding: 0 1rem;
+				max-width: 1560px;
+				margin: 0 auto;
+			}
+			
+			x-grid {
+				margin-top: 1rem;
+			}
+
+			x-grid:last-child {
+				margin-bottom: 1rem;
+			}
+
 			x-col {
-				background: red;
+				background: rgba(0, 0, 0, 0.05);
 				min-height: 128px;
 			}
 		</style>
 	</head>
 
 	<body>
-		<x-grid cols="1 sm:2 md:3 lg:4">
-			<x-col span="sm:row md:2 lg:1"></x-col>
+		<x-grid cols="sm:2" gap="8">
+			<x-col></x-col>
+			<x-col></x-col>
+		</x-grid>
+		<x-grid cols="md:3" gap="8">
 			<x-col></x-col>
 			<x-col></x-col>
 			<x-col></x-col>
+		</x-grid>
+		<x-grid cols="sm:2 lg:4" gap="8">
+			<x-col></x-col>
+			<x-col></x-col>
+			<x-col></x-col>
+			<x-col></x-col>
+		</x-grid>
+		<x-grid cols="sm:2 xl:12" gap="8">
+			<x-col span="xl:5" start="xl:2"></x-col>
+			<x-col span="xl:5"></x-col>
+		</x-grid>
+		<x-grid cols="sm:2 md:4 xl:12" gap="8">
+			<x-col span="xl:2" start="xl:2"></x-col>
+			<x-col span="md:3 xl:7" start="xl:5"></x-col>
+		</x-grid>
+		<x-grid cols="sm:3 xl:12" gap="8">
+			<x-col span="xl:3" start="xl:2"></x-col>
+			<x-col span="sm:2 xl:6" start="xl:6"></x-col>
+		</x-grid>
+		<x-grid cols="sm:5 xl:12" gap="8">
+			<x-col span="sm:2 xl:4" start="xl:2"></x-col>
+			<x-col span="sm:3 xl:5" start="xl:7"></x-col>
+		</x-grid>
+		<x-grid cols="sm:5 xl:12" gap="8">
+			<x-col span="sm:3 xl:5" start="xl:2"></x-col>
+			<x-col span="sm:2 xl:4" start="xl:8"></x-col>
+		</x-grid>
+		<x-grid cols="sm:3 xl:12" gap="8">
+			<x-col span="sm:2 xl:6" start="xl:2"></x-col>
+			<x-col span="xl:3" start="xl:9"></x-col>
+		</x-grid>
+		<x-grid cols="sm:2 md:4 xl:12" gap="8">
+			<x-col span="md:3 xl:7" start="xl:2"></x-col>
+			<x-col span="xl:2" start="xl:10"></x-col>
+		</x-grid>
+
+		<x-grid cols="sm:2 md:4 xl:12" gap="8">
+			<x-col span="sm:row md:2 xl:4" start="xl:2"></x-col>
+			<x-col span="xl:3"></x-col>
+			<x-col span="xl:3"></x-col>
+		</x-grid>
+		<x-grid dense cols="sm:2 md:4 xl:12" gap="8">
+			<x-col span="xl:3" start="xl:2"></x-col>
+			<x-col span="sm:row md:2 xl:4"></x-col>
+			<x-col span="xl:3"></x-col>
+		</x-grid>
+		<x-grid cols="sm:2 md:4 xl:12" gap="8">
+			<x-col span="xl:3" start="xl:2"></x-col>
+			<x-col span="xl:3"></x-col>
+			<x-col span="sm:row md:2 xl:4"></x-col>
 		</x-grid>
 	</body>
 </html>
