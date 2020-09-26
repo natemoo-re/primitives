@@ -16,8 +16,8 @@ A responsive attribute consists of a value (most often an `<integer>`), and one 
 
 **Attributes**
 
-- `cols` is a responsive attribute representing the number of columns per row at a given breakpoint.
-- `gap` is a responsive attribute which accepts an `<integer>` following Tailwind's [default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale) (but named after the pixel values rather than the scale name). It applies both `row-gap` and `column-gap` properties. 
+- `cols` is a [responsive attribute](#responsive-attribute) representing the number of columns per row at a given breakpoint.
+- `gap` is a [responsive attribute](#responsive-attribute) which accepts an `<integer>` following Tailwind's [default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale) (but named after the pixel values rather than the scale name). It applies both `row-gap` and `column-gap` properties. 
 - `dense` is a boolean attribute which enables `dense` packing inside of the grid.
 
 **Custom Properties**
@@ -30,6 +30,6 @@ A responsive attribute consists of a value (most often an `<integer>`), and one 
 
 **Attributes**
 
-- `span` is a responsive attribute which accepts `1-12|row`, representing the number of columns to span. Defaults to `1`.
-- `start` is a responsive attribute representing the column on which to start. Defaults to `auto`.
-- `end` is a responsive attribute representing the column on which to end. Defaults to `auto`. Note that this `<integer>` represents the *end* track of a column (so `end="8"` will stretch up until column 9.)
+- `span` is a [responsive attribute](#responsive-attribute) which accepts `1-12|row`, representing the number of columns to span. Defaults to `1`.
+- `start` is a [responsive attribute](#responsive-attribute) representing the column on which to start. Defaults to `auto`.
+- `end` is a [responsive attribute](#responsive-attribute) representing the column on which to end. Defaults to `auto`. Note that this `<integer>` represents the *end* track of a column (so `end="8"` will stretch up until column 9.)
